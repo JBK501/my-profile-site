@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JBK | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Nanum Gothic"', "sans-serif"],
+            },
+            colors: {
+              primary: "#050a13",
+              "primary-variant": "#1b1e26",
+              accent: "#03e8f9",
+              "accent-variant": "#fd6413",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      .bar__value {
+        transition: width 1s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-primary text-white">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#home" class="text-2xl font-extrabold text-white">JBK</a>
+
+        <ul
+          id="desktop-menu"
+          class="hidden md:flex items-center gap-2 text-sm font-bold"
+        >
+          <li>
+            <a
+              href="#home"
+              class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#work"
+              class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
+              >My Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonial"
+              class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
+              >Testimonial</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <button
+          id="menu-btn"
+          class="md:hidden flex flex-col gap-1.5 p-2"
+          aria-label="메뉴 열기"
+        >
+          <span class="w-6 h-0.5 bg-white"></span>
+          <span class="w-6 h-0.5 bg-white"></span>
+          <span class="w-6 h-0.5 bg-white"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden flex-col gap-1 px-6 pb-4 text-sm font-bold bg-primary-variant"
+      >
+        <li>
+          <a
+            href="#home"
+            class="mobile-nav-link block py-3 hover:text-accent transition-colors"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="mobile-nav-link block py-3 hover:text-accent transition-colors"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#skills"
+            class="mobile-nav-link block py-3 hover:text-accent transition-colors"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            href="#work"
+            class="mobile-nav-link block py-3 hover:text-accent transition-colors"
+            >My Work</a
+          >
+        </li>
+        <li>
+          <a
+            href="#testimonial"
+            class="mobile-nav-link block py-3 hover:text-accent transition-colors"
+            >Testimonial</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="mobile-nav-link block py-3 hover:text-accent transition-colors"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section
+        id="home"
+        class="relative min-h-screen flex items-center justify-center px-6 pt-24 overflow-hidden"
+      >
+        <div
+          class="absolute top-1/3 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 -left-32 w-96 h-96 bg-accent-variant/10 rounded-full blur-3xl"
+        ></div>
+
+        <div class="relative text-center max-w-2xl">
+          <img
+            src="images/profile.png"
+            alt="JBK profile"
+            class="w-32 h-32 mx-auto mb-8 rounded-full object-cover border-4 border-accent shadow-lg shadow-accent/30"
+          />
+
+          <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+            Hello<br />
+            I'm <strong class="text-accent">Full-Stack Developer</strong>, JBK
+          </h2>
+          <p class="text-lg md:text-xl text-white/70 mb-8">
+            HTML/CSS/JavaScript부터 Spring, Vue, JSP까지 다루는 풀스택
+            개발자입니다
+          </p>
+          <a
+            href="#contact"
+            class="inline-block bg-accent text-primary font-bold px-8 py-3 rounded-full hover:bg-white transition-colors"
+          >
+            Contact Me
+          </a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section
+        id="about"
+        class="section max-w-5xl mx-auto px-6 py-20 text-center"
+      >
+        <h2 class="text-4xl font-extrabold mb-4">About me</h2>
+        <p class="text-white/70 max-w-2xl mx-auto leading-relaxed mb-14">
+          사용자 경험을 중요하게 생각하는 풀스택 개발자입니다.
+          HTML/CSS/JavaScript부터 Spring, Vue, JSP까지 프론트엔드와 백엔드를
+          아우르며 문제를 해결하는 것을 즐깁니다. 새로운 기술을 배우는 것을
+          두려워하지 않으며, 협업과 소통을 통해 더 나은 결과물을 만들어가는 것을
+          지향합니다.
+        </p>
+
+        <ul class="grid sm:grid-cols-3 gap-6 mb-16">
+          <li
+            class="bg-primary-variant rounded-2xl p-8 hover:-translate-y-1 transition-transform"
+          >
+            <div
+              class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-2xl font-bold"
+            >
+              &lt;/&gt;
+            </div>
+            <p class="text-lg font-bold mb-2">Front-End</p>
+            <p class="text-sm text-white/60">HTML, CSS, JavaScript, Vue</p>
+          </li>
+          <li
+            class="bg-primary-variant rounded-2xl p-8 hover:-translate-y-1 transition-transform"
+          >
+            <div
+              class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-2xl font-bold"
+            >
+              { }
+            </div>
+            <p class="text-lg font-bold mb-2">Back-End</p>
+            <p class="text-sm text-white/60">Spring, JSP, Java</p>
+          </li>
+          <li
+            class="bg-primary-variant rounded-2xl p-8 hover:-translate-y-1 transition-transform"
+          >
+            <div
+              class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-2xl font-bold"
+            >
+              DB
+            </div>
+            <p class="text-lg font-bold mb-2">Database & Tools</p>
+            <p class="text-sm text-white/60">PostgreSQL, Git, VS Code</p>
+          </li>
+        </ul>
+
+        <ul class="max-w-xl mx-auto space-y-4 text-left">
+          <li class="flex items-center gap-4 bg-primary-variant rounded-xl p-5">
+            <div
+              class="w-12 h-12 shrink-0 rounded-full bg-white p-1.5 flex items-center justify-center"
+            >
+              <img
+                src="images/jobs/hg.png"
+                alt="HG Logo"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div>
+              <p class="font-bold">(주)에이치지</p>
+              <p class="text-sm text-white/50">2024.11 ~ 현재</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-4 bg-primary-variant rounded-xl p-5">
+            <div
+              class="w-12 h-12 shrink-0 rounded-full bg-white p-1.5 flex items-center justify-center"
+            >
+              <img
+                src="images/jobs/qwerty.png"
+                alt="Qwerty Logo"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div>
+              <p class="font-bold">쿼티시스템</p>
+              <p class="text-sm text-white/50">2023.05 ~ 2023.08</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="py-20 px-6 bg-primary-variant/30">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="text-4xl font-extrabold mb-2">Skills</h2>
+          <p class="text-white/70 mb-14">Skills & Attributes</p>
+
+          <div class="grid md:grid-cols-3 gap-10 text-left">
+            <div>
+              <h3 class="text-lg font-bold mb-6 text-accent">Coding Skills</h3>
+              <ul class="space-y-4">
+                <li>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>HTML</span><span>95%</span>
+                  </div>
+                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      class="bar__value h-full bg-accent rounded-full"
+                      style="width: 95%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>CSS</span><span>90%</span>
+                  </div>
+                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      class="bar__value h-full bg-accent rounded-full"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>JavaScript</span><span>88%</span>
+                  </div>
+                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      class="bar__value h-full bg-accent rounded-full"
+                      style="width: 88%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Spring</span><span>80%</span>
+                  </div>
+                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      class="bar__value h-full bg-accent rounded-full"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Vue</span><span>78%</span>
+                  </div>
+                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      class="bar__value h-full bg-accent rounded-full"
+                      style="width: 78%"
+                    ></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>JSP</span><span>75%</span>
+                  </div>
+                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      class="bar__value h-full bg-accent rounded-full"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-6 text-accent">Tools</h3>
+              <ul class="space-y-3 text-white/70">
+                <li class="bg-primary-variant rounded-lg px-4 py-3">
+                  Visual Studio Code
+                </li>
+                <li class="bg-primary-variant rounded-lg px-4 py-3">
+                  IntelliJ IDEA
+                </li>
+                <li class="bg-primary-variant rounded-lg px-4 py-3">
+                  Git / GitHub
+                </li>
+                <li class="bg-primary-variant rounded-lg px-4 py-3">DBeaver</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-6 text-accent">Etc</h3>
+              <ul class="space-y-3 text-white/70">
+                <li class="bg-primary-variant rounded-lg px-4 py-3">
+                  Git 협업
+                </li>
+                <li class="bg-primary-variant rounded-lg px-4 py-3">
+                  문제 해결
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Work -->
+      <section id="work" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-4xl font-extrabold mb-2">My work</h2>
+            <p class="text-white/70">Projects</p>
+          </div>
+
+          <ul class="flex flex-wrap justify-center gap-3 mb-12">
+            <li>
+              <button
+                class="category category--selected px-5 py-2 rounded-full bg-accent text-primary font-bold text-sm transition-colors"
+                data-category="all"
+              >
+                All <span class="ml-1 opacity-70">5</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="category px-5 py-2 rounded-full bg-primary-variant text-white font-bold text-sm transition-colors"
+                data-category="operations"
+              >
+                운영지원 <span class="ml-1 opacity-70">1</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="category px-5 py-2 rounded-full bg-primary-variant text-white font-bold text-sm transition-colors"
+                data-category="development"
+              >
+                개발 <span class="ml-1 opacity-70">4</span>
+              </button>
+            </li>
+          </ul>
+
+          <ul
+            id="project-list"
+            class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8"
+          >
+            <li
+              class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
+              data-type="development"
+            >
+              <a href="https://www.hussnet.com/" target="_blank" class="block">
+                <div
+                  class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
+                >
+                  <img
+                    src="images/projects/huss.png"
+                    alt="HUSS"
+                    class="h-full object-contain"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">
+                    HUSS 인문사회 융합인재사업 웹사이트 개발
+                  </h3>
+                  <p class="text-white/60 text-sm mb-4">
+                    인문사회 융합인재양성사업의 통합 포털 및 관리 시스템 개발
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >Spring</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >JSP</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li
+              class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
+              data-type="development"
+            >
+              <a href="https://uniall.nrf.re.kr/" target="_blank" class="block">
+                <div
+                  class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
+                >
+                  <img
+                    src="images/projects/uniall.png"
+                    alt="대학재정지원사업 통합포털"
+                    class="h-full object-contain"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">
+                    유니올 대학재정지원사업 평가위원검증 프로젝트 개발
+                  </h3>
+                  <p class="text-white/60 text-sm mb-4">
+                    대학재정지원사업 통합포털의 평가위원 검증 기능 개발
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >Spring</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >JSP</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li
+              class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
+              data-type="operations"
+            >
+              <a
+                href="https://www.seoulrise.or.kr/"
+                target="_blank"
+                class="block"
+              >
+                <div
+                  class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
+                >
+                  <img
+                    src="images/projects/seoulrise.svg"
+                    alt="라이즈(RISE)"
+                    class="h-full object-contain"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">
+                    라이즈(RISE) 성과관리플랫폼 운영지원
+                  </h3>
+                  <p class="text-white/60 text-sm mb-4">
+                    서울시 대학재정지원사업 성과관리플랫폼 운영 및 지원
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >메일</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >연락업무</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >문서작업</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li
+              class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
+              data-type="development"
+            >
+              <a
+                href="https://www.seoulrise.or.kr/"
+                target="_blank"
+                class="block"
+              >
+                <div
+                  class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
+                >
+                  <img
+                    src="images/projects/seoulrise.svg"
+                    alt="라이즈(RISE)"
+                    class="h-full object-contain"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">
+                    라이즈(RISE) 누리집 운영 및 개발
+                  </h3>
+                  <p class="text-white/60 text-sm mb-4">
+                    서울시 대학재정지원사업 공식 누리집의 운영 및 신규 기능 개발
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >Spring</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >JSP</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li
+              class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
+              data-type="development"
+            >
+              <a
+                href="https://www.seoulrise.or.kr/"
+                target="_blank"
+                class="block"
+              >
+                <div
+                  class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
+                >
+                  <img
+                    src="images/projects/seoulrise.svg"
+                    alt="라이즈(RISE)"
+                    class="h-full object-contain"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">
+                    라이즈(RISE) 성과관리플랫폼 신규개발 및 유지보수
+                  </h3>
+                  <p class="text-white/60 text-sm mb-4">
+                    차세대 성과관리플랫폼의 신규 개발 (Spring Boot + Vue3 기반)
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >Spring Boot</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >Vue3</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section id="testimonial" class="py-20 px-6 bg-primary-variant/30">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="text-4xl font-extrabold mb-2">Testimonials</h2>
+          <p class="text-white/70 mb-14">See what they say about me (예시)</p>
+
+          <ul class="grid md:grid-cols-3 gap-8 text-left">
+            <li class="bg-primary-variant rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src="images/testimonials/person1.jpg"
+                  alt="동료"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p class="font-bold">동료 A (예시)</p>
+                  <p class="text-xs text-white/50">협업 프로젝트 팀원</p>
+                </div>
+              </div>
+              <p class="text-sm text-white/70 leading-relaxed">
+                꼼꼼한 코드 리뷰와 빠른 문제 해결 능력이 인상적이었습니다. 함께
+                일하기 편한 개발자입니다.
+              </p>
+            </li>
+            <li class="bg-primary-variant rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src="images/testimonials/person2.jpg"
+                  alt="동료"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p class="font-bold">동료 B (예시)</p>
+                  <p class="text-xs text-white/50">프로젝트 매니저</p>
+                </div>
+              </div>
+              <p class="text-sm text-white/70 leading-relaxed">
+                일정 관리와 커뮤니케이션이 뛰어나 협업 과정에서 큰 도움이
+                되었습니다.
+              </p>
+            </li>
+            <li class="bg-primary-variant rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src="images/testimonials/person3.jpg"
+                  alt="동료"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p class="font-bold">동료 C (예시)</p>
+                  <p class="text-xs text-white/50">백엔드 개발자</p>
+                </div>
+              </div>
+              <p class="text-sm text-white/70 leading-relaxed">
+                프론트와 백엔드를 넘나들며 문제를 해결하는 모습이 신뢰가
+                갔습니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Arrow Up -->
+      <a
+        href="#home"
+        id="arrow-up"
+        title="Back to Top"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-opacity z-40"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 15l7-7 7 7"
+          />
+        </svg>
+      </a>
+    </main>
+
+    <!-- Contact / Footer -->
+    <footer
+      id="contact"
+      class="py-20 px-6 text-center border-t border-white/10"
+    >
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-4xl font-extrabold mb-4">Let's talk</h2>
+        <a
+          href="mailto:test@naver.com"
+          class="text-xl text-accent font-bold hover:underline"
+          >test@naver.com</a
+        >
+
+        <ul class="flex items-center justify-center gap-4 my-8">
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              title="my github link"
+              class="w-11 h-11 flex items-center justify-center rounded-full bg-primary-variant hover:bg-accent hover:text-primary transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.51 11.51 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              title="my linkedin link"
+              class="w-11 h-11 flex items-center justify-center rounded-full bg-primary-variant hover:bg-accent hover:text-primary transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <p class="text-sm text-white/40">
+          &copy; 2026 JBK. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // 스크롤 스파이 - 현재 보이는 섹션 감지
+      const sections = document.querySelectorAll("section[id], footer[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "-50% 0px -50% 0px",
+        threshold: 0,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+
+            // 데스크탑 메뉴 업데이트
+            navLinks.forEach((link) => {
+              link.classList.remove("border-accent", "text-accent");
+              link.classList.add("border-transparent");
+            });
+            const activeLink = document.querySelector(
+              `.nav-link[href="#${id}"]`,
+            );
+            if (activeLink) {
+              activeLink.classList.remove("border-transparent");
+              activeLink.classList.add("border-accent", "text-accent");
+            }
+
+            // 모바일 메뉴 업데이트
+            mobileNavLinks.forEach((link) => {
+              link.classList.remove("text-accent");
+            });
+            const activeMobileLink = document.querySelector(
+              `.mobile-nav-link[href="#${id}"]`,
+            );
+            if (activeMobileLink) {
+              activeMobileLink.classList.add("text-accent");
+            }
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => observer.observe(section));
+
+      // 모바일 메뉴 토글
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        if (isHidden) {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+        } else {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+        }
+      });
+
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+        });
+      });
+
+      // 스크롤 시 헤더 배경 전환 + 맨 위로 버튼 표시
+      const header = document.getElementById("header");
+      const arrowUp = document.getElementById("arrow-up");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          header.classList.add(
+            "bg-primary/90",
+            "backdrop-blur-md",
+            "shadow-lg",
+            "shadow-accent/10",
+          );
+        } else {
+          header.classList.remove(
+            "bg-primary/90",
+            "backdrop-blur-md",
+            "shadow-lg",
+            "shadow-accent/10",
+          );
+        }
+
+        if (window.scrollY > 400) {
+          arrowUp.classList.remove("opacity-0", "pointer-events-none");
+          arrowUp.classList.add("opacity-100");
+        } else {
+          arrowUp.classList.add("opacity-0", "pointer-events-none");
+          arrowUp.classList.remove("opacity-100");
+        }
+      });
+
+      // 프로젝트 카테고리 필터
+      const categoryButtons = document.querySelectorAll(".category");
+      const projects = document.querySelectorAll(".project");
+
+      categoryButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          categoryButtons.forEach((b) => {
+            b.classList.remove(
+              "bg-accent",
+              "text-primary",
+              "category--selected",
+            );
+            b.classList.add("bg-primary-variant", "text-white");
+          });
+          btn.classList.add("bg-accent", "text-primary", "category--selected");
+          btn.classList.remove("bg-primary-variant", "text-white");
+
+          const category = btn.dataset.category;
+          projects.forEach((project) => {
+            const types = project.dataset.type.split(" ");
+            if (category === "all" || types.includes(category)) {
+              project.classList.remove("hidden");
+            } else {
+              project.classList.add("hidden");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
