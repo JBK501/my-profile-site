@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JBK | Portfolio</title>
+    <meta
+      name="description"
+      content="현장의 요구를 동작하는 시스템으로 잇는 엔지니어 JBK의 포트폴리오"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,9 +39,6 @@
       body {
         font-family: "Nanum Gothic", sans-serif;
       }
-      .bar__value {
-        transition: width 1s ease;
-      }
     </style>
   </head>
   <body class="bg-primary text-white">
@@ -49,7 +50,9 @@
       <nav
         class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
       >
-        <a href="#home" class="text-2xl font-extrabold text-white">JBK</a>
+        <a href="#home" class="text-2xl font-extrabold text-white"
+          >JBK Portfolio</a
+        >
 
         <ul
           id="desktop-menu"
@@ -67,13 +70,6 @@
               href="#about"
               class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
               >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#skills"
-              class="nav-link px-3 py-1.5 rounded-lg border border-transparent hover:text-accent transition-colors"
-              >Skills</a
             >
           </li>
           <li>
@@ -124,13 +120,6 @@
         </li>
         <li>
           <a
-            href="#skills"
-            class="mobile-nav-link block py-3 hover:text-accent transition-colors"
-            >Skills</a
-          >
-        </li>
-        <li>
-          <a
             href="#work"
             class="mobile-nav-link block py-3 hover:text-accent transition-colors"
             >My Work</a
@@ -166,13 +155,19 @@
             class="w-32 h-32 mx-auto mb-8 rounded-full object-cover border-4 border-accent shadow-lg shadow-accent/30"
           />
 
-          <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-            Hello<br />
-            I'm <strong class="text-accent">Full-Stack Developer</strong>, JBK
+          <!-- break-keep: 한글을 단어 단위로 줄바꿈 / text-balance: 줄 길이 균형 -->
+          <h2
+            class="text-3xl md:text-5xl font-extrabold leading-snug md:leading-[1.35] mb-6 break-keep text-balance"
+          >
+            <strong class="text-accent">현장의 요구</strong>를 동작하는
+            시스템으로 잇는<br />
+            엔지니어 JBK
           </h2>
-          <p class="text-lg md:text-xl text-white/70 mb-8">
-            HTML/CSS/JavaScript부터 Spring, Vue, JSP까지 다루는 풀스택
-            개발자입니다
+          <p
+            class="text-lg md:text-xl text-white/70 mb-8 break-keep text-balance"
+          >
+            고객기관 문의 대응과 기획부터 시스템 설계 및 구현, 운영까지. 현장을
+            아는 엔지니어입니다.
           </p>
           <a
             href="#contact"
@@ -189,12 +184,12 @@
         class="section max-w-5xl mx-auto px-6 py-20 text-center"
       >
         <h2 class="text-4xl font-extrabold mb-4">About me</h2>
-        <p class="text-white/70 max-w-2xl mx-auto leading-relaxed mb-14">
-          사용자 경험을 중요하게 생각하는 풀스택 개발자입니다.
-          HTML/CSS/JavaScript부터 Spring, Vue, JSP까지 프론트엔드와 백엔드를
-          아우르며 문제를 해결하는 것을 즐깁니다. 새로운 기술을 배우는 것을
-          두려워하지 않으며, 협업과 소통을 통해 더 나은 결과물을 만들어가는 것을
-          지향합니다.
+        <p
+          class="text-white/70 max-w-2xl mx-auto leading-relaxed mb-14 break-keep"
+        >
+          고객기관의 문의와 장애를 접수해 처리하고, 운영 매뉴얼과 각종 문서를
+          작성해 왔습니다. 요구사항을 조사하고 기획한 뒤, 필요한 기술을 골라
+          직접 구현까지 맡았습니다.
         </p>
 
         <ul class="grid sm:grid-cols-3 gap-6 mb-16">
@@ -206,8 +201,10 @@
             >
               &lt;/&gt;
             </div>
-            <p class="text-lg font-bold mb-2">Front-End</p>
-            <p class="text-sm text-white/60">HTML, CSS, JavaScript, Vue</p>
+            <p class="text-lg font-bold mb-2">기획 · 소통</p>
+            <p class="text-sm text-white/60">
+              요구사항 정리, 자료조사, 고객기관 문의 대응
+            </p>
           </li>
           <li
             class="bg-primary-variant rounded-2xl p-8 hover:-translate-y-1 transition-transform"
@@ -217,8 +214,10 @@
             >
               { }
             </div>
-            <p class="text-lg font-bold mb-2">Back-End</p>
-            <p class="text-sm text-white/60">Spring, JSP, Java</p>
+            <p class="text-lg font-bold mb-2">개발</p>
+            <p class="text-sm text-white/60">
+              Spring, JSP, Vue, PostgreSQL, GitLab, OZ리포트
+            </p>
           </li>
           <li
             class="bg-primary-variant rounded-2xl p-8 hover:-translate-y-1 transition-transform"
@@ -228,8 +227,8 @@
             >
               DB
             </div>
-            <p class="text-lg font-bold mb-2">Database & Tools</p>
-            <p class="text-sm text-white/60">PostgreSQL, Git, VS Code</p>
+            <p class="text-lg font-bold mb-2">운영</p>
+            <p class="text-sm text-white/60">장애 접수·전달, 운영 매뉴얼</p>
           </li>
         </ul>
 
@@ -267,116 +266,6 @@
         </ul>
       </section>
 
-      <!-- Skills -->
-      <section id="skills" class="py-20 px-6 bg-primary-variant/30">
-        <div class="max-w-5xl mx-auto text-center">
-          <h2 class="text-4xl font-extrabold mb-2">Skills</h2>
-          <p class="text-white/70 mb-14">Skills & Attributes</p>
-
-          <div class="grid md:grid-cols-3 gap-10 text-left">
-            <div>
-              <h3 class="text-lg font-bold mb-6 text-accent">Coding Skills</h3>
-              <ul class="space-y-4">
-                <li>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>HTML</span><span>95%</span>
-                  </div>
-                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      class="bar__value h-full bg-accent rounded-full"
-                      style="width: 95%"
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>CSS</span><span>90%</span>
-                  </div>
-                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      class="bar__value h-full bg-accent rounded-full"
-                      style="width: 90%"
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>JavaScript</span><span>88%</span>
-                  </div>
-                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      class="bar__value h-full bg-accent rounded-full"
-                      style="width: 88%"
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>Spring</span><span>80%</span>
-                  </div>
-                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      class="bar__value h-full bg-accent rounded-full"
-                      style="width: 80%"
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>Vue</span><span>78%</span>
-                  </div>
-                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      class="bar__value h-full bg-accent rounded-full"
-                      style="width: 78%"
-                    ></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>JSP</span><span>75%</span>
-                  </div>
-                  <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      class="bar__value h-full bg-accent rounded-full"
-                      style="width: 75%"
-                    ></div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold mb-6 text-accent">Tools</h3>
-              <ul class="space-y-3 text-white/70">
-                <li class="bg-primary-variant rounded-lg px-4 py-3">
-                  Visual Studio Code
-                </li>
-                <li class="bg-primary-variant rounded-lg px-4 py-3">
-                  IntelliJ IDEA
-                </li>
-                <li class="bg-primary-variant rounded-lg px-4 py-3">
-                  Git / GitHub
-                </li>
-                <li class="bg-primary-variant rounded-lg px-4 py-3">DBeaver</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-bold mb-6 text-accent">Etc</h3>
-              <ul class="space-y-3 text-white/70">
-                <li class="bg-primary-variant rounded-lg px-4 py-3">
-                  Git 협업
-                </li>
-                <li class="bg-primary-variant rounded-lg px-4 py-3">
-                  문제 해결
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- My Work -->
       <section id="work" class="py-20 px-6">
         <div class="max-w-6xl mx-auto">
@@ -391,7 +280,7 @@
                 class="category category--selected px-5 py-2 rounded-full bg-accent text-primary font-bold text-sm transition-colors"
                 data-category="all"
               >
-                All <span class="ml-1 opacity-70">5</span>
+                All <span class="ml-1 opacity-70">6</span>
               </button>
             </li>
             <li>
@@ -399,7 +288,7 @@
                 class="category px-5 py-2 rounded-full bg-primary-variant text-white font-bold text-sm transition-colors"
                 data-category="operations"
               >
-                운영지원 <span class="ml-1 opacity-70">1</span>
+                기획/운영 <span class="ml-1 opacity-70">2</span>
               </button>
             </li>
             <li>
@@ -420,23 +309,74 @@
               class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
               data-type="development"
             >
-              <a href="https://www.hussnet.com/" target="_blank" class="block">
+              <a
+                href="https://www.seoulrise.or.kr/"
+                target="_blank"
+                class="block"
+              >
                 <div
                   class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
                 >
                   <img
-                    src="images/projects/huss.png"
-                    alt="HUSS"
+                    src="images/projects/seoulrise.svg"
+                    alt="라이즈(RISE)"
                     class="h-full object-contain"
                   />
                 </div>
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">
-                    HUSS 인문사회 융합인재사업 웹사이트 개발
+                  <h3 class="text-xl font-bold mb-1">
+                    지역 RISE 성과관리플랫폼 구축 및 운영(서울)
                   </h3>
+                  <p class="text-white/40 text-xs mb-3">2025.10.22 ~ 현재</p>
                   <p class="text-white/60 text-sm mb-4">
-                    인문사회 융합인재양성사업의 통합 포털 및 관리 시스템 개발
+                    성과관리플랫폼 구축 및 운영
                   </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >Spring Boot</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >Vue3</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >SQL</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >OZ리포트</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li
+              class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
+              data-type="development"
+            >
+              <a
+                href="https://www.seoulrise.or.kr/"
+                target="_blank"
+                class="block"
+              >
+                <div
+                  class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
+                >
+                  <img
+                    src="images/projects/seoulrise.svg"
+                    alt="라이즈(RISE)"
+                    class="h-full object-contain"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-1">
+                    지역 RISE 누리집 구축 및 운영(서울)
+                  </h3>
+                  <p class="text-white/40 text-xs mb-3">2026.07.15 ~ 현재</p>
+                  <p class="text-white/60 text-sm mb-4">누리집 구축 및 운영</p>
                   <div class="flex flex-wrap gap-2">
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
@@ -445,6 +385,10 @@
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
                       >JSP</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >SQL</span
                     >
                   </div>
                 </div>
@@ -466,20 +410,28 @@
                   />
                 </div>
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">
-                    유니올 대학재정지원사업 평가위원검증 프로젝트 개발
+                  <h3 class="text-xl font-bold mb-1">
+                    대학재정지원사업 통합정보시스템(UniAll) 운영 및 평가위원 DB
+                    구축
                   </h3>
+                  <p class="text-white/40 text-xs mb-3">
+                    2025.05.07 ~ 2025.10.21
+                  </p>
                   <p class="text-white/60 text-sm mb-4">
-                    대학재정지원사업 통합포털의 평가위원 검증 기능 개발
+                    통합정보시스템 운영 및 평가위원 DB 구축
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
-                      >Spring</span
+                      >Spring Boot</span
                     >
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
-                      >JSP</span
+                      >Vue3</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >SQL</span
                     >
                   </div>
                 </div>
@@ -505,24 +457,25 @@
                   />
                 </div>
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">
-                    라이즈(RISE) 성과관리플랫폼 운영지원
-                  </h3>
+                  <h3 class="text-xl font-bold mb-1">지역 RISE 운영(서울)</h3>
+                  <p class="text-white/40 text-xs mb-3">
+                    2025.03.05 ~ 2025.05.06
+                  </p>
                   <p class="text-white/60 text-sm mb-4">
-                    서울시 대학재정지원사업 성과관리플랫폼 운영 및 지원
+                    지역 RISE 성과관리플랫폼 시스템 운영 및 지원
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
-                      >메일</span
+                      >고객기관 문의 대응</span
                     >
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
-                      >연락업무</span
+                      >장애 접수와 개발팀 전달</span
                     >
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
-                      >문서작업</span
+                      >운영 매뉴얼 작성</span
                     >
                   </div>
                 </div>
@@ -533,26 +486,26 @@
               class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
               data-type="development"
             >
-              <a
-                href="https://www.seoulrise.or.kr/"
-                target="_blank"
-                class="block"
-              >
+              <a href="https://www.hussnet.com/" target="_blank" class="block">
                 <div
                   class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
                 >
                   <img
-                    src="images/projects/seoulrise.svg"
-                    alt="라이즈(RISE)"
+                    src="images/projects/huss.png"
+                    alt="HUSS"
                     class="h-full object-contain"
                   />
                 </div>
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">
-                    라이즈(RISE) 누리집 운영 및 개발
+                  <h3 class="text-xl font-bold mb-1">
+                    HUSS 인문사회 융합인재 양성사업 홈페이지 개선 및 운영
                   </h3>
+                  <p class="text-white/40 text-xs mb-3">
+                    2024.12.06 ~ 2025.01.17 (시스템 기능 개선) · ~2025.11
+                    (유지보수)
+                  </p>
                   <p class="text-white/60 text-sm mb-4">
-                    서울시 대학재정지원사업 공식 누리집의 운영 및 신규 기능 개발
+                    인문사회 융합인재양성사업 홈페이지의 기능 개선 및 유지보수
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <span
@@ -563,6 +516,10 @@
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
                       >JSP</span
                     >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >SQL</span
+                    >
                   </div>
                 </div>
               </a>
@@ -570,41 +527,49 @@
 
             <li
               class="project rounded-2xl overflow-hidden bg-primary-variant hover:-translate-y-1 transition-transform"
-              data-type="development"
+              data-type="operations"
             >
-              <a
-                href="https://www.seoulrise.or.kr/"
-                target="_blank"
-                class="block"
-              >
+              <div class="block">
+                <!-- 로고/링크가 없어 텍스트 플레이스홀더로 대체 -->
                 <div
                   class="w-full h-52 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6"
                 >
-                  <img
-                    src="images/projects/seoulrise.svg"
-                    alt="라이즈(RISE)"
-                    class="h-full object-contain"
-                  />
+                  <span class="text-2xl font-extrabold text-white/70"
+                    >Celeb Archive</span
+                  >
                 </div>
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">
-                    라이즈(RISE) 성과관리플랫폼 신규개발 및 유지보수
+                  <h3 class="text-xl font-bold mb-1">
+                    건국대학교 글로컬 산학협력단 Celeb 아카이브 기획
                   </h3>
-                  <p class="text-white/60 text-sm mb-4">
-                    차세대 성과관리플랫폼의 신규 개발 (Spring Boot + Vue3 기반)
+                  <p class="text-white/40 text-xs mb-3">
+                    2024.11.04 ~ 2025.03.04
                   </p>
+                  <p class="text-white/60 text-sm mb-4">Celeb 아카이브 기획</p>
                   <div class="flex flex-wrap gap-2">
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
-                      >Spring Boot</span
+                      >블록체인</span
                     >
                     <span
                       class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
-                      >Vue3</span
+                      >자료조사</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >스토리보드 작성</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >DB설계</span
+                    >
+                    <span
+                      class="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full"
+                      >개발환경 구성</span
                     >
                   </div>
                 </div>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -703,7 +668,12 @@
         }
       };
 
+      // 최하단 도달 여부 (true면 contact 고정, Observer 결과는 무시)
+      let forcedBottom = false;
+
       const observer = new IntersectionObserver((entries) => {
+        // 스무스 스크롤 도착 직후 Observer 콜백이 contact를 덮어쓰는 것을 방지
+        if (forcedBottom) return;
         entries.forEach((entry) => {
           if (entry.isIntersecting) setActive(entry.target.id);
         });
@@ -713,7 +683,6 @@
 
       // 최하단 도달 시 contact 강제 활성화
       // footer가 짧아 중앙선이 닿기 전에 스크롤이 끝나므로 Observer만으로는 감지 불가
-      let forcedBottom = false;
       window.addEventListener(
         "scroll",
         () => {
